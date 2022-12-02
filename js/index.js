@@ -9,7 +9,7 @@ if (products) {
 			imageSwitchItems.forEach((el, index) => {
 				el.setAttribute('data-index', index);
 				imagePagination.innerHTML += `<li class="image-pagination__item ${index == 0 ? 'image-pagination__item--active' : ''}" data-index="${index}"></li>`;
-				el.addEventListener('click', (e) => {
+				el.addEventListener('mouseenter', (e) => {
 					currentProduct.querySelectorAll('.image-pagination__item').forEach(el => {el.classList.remove('image-pagination__item--active')});
 					currentProduct.querySelector(`.image-pagination__item[data-index="${e.currentTarget.dataset.index}"]`).classList.add('image-pagination__item--active');
 				});

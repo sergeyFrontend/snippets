@@ -1,0 +1,50 @@
+@import "global.css";
+@import "product.css";
+
+:root {
+  --guter: 20px;
+}
+
+.container {
+  max-width: 1244px;
+  padding: 0 var(--guter);
+  margin: 0 auto;
+}
+
+.grid-container {
+  display: grid;
+  width: 100%;
+  grid-gap: var(--guter);
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.products-grid {
+  grid-column: 3 span;
+  display: grid;
+  grid-gap: var(--guter);
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.filters {
+  position: relative;
+}
+
+.filters-price__input {
+  width: 100%;
+}
+
+.fixed {
+  position: fixed;
+  top: var(--guter);
+  left: 0;
+}
+
+.absolute {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.heights {
+  height: 3000px;
+}
